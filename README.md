@@ -1,6 +1,22 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+This repository is to build a Docker image to simplify the building of [Joget](https://www.joget.org) plugins with minimal dependencies.
+
+# Usage
+
+## Generate a plugin
+
+```
+docker run -it --rm -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven jogetworkflow/docker-maven-joget:7.0-SNAPSHOT mvn archetype:generate -DarchetypeGroupId=org.joget -DarchetypeArtifactId=wflow-plugin-archetype -DarchetypeVersion=7.0-SNAPSHOT -DgroupId=org.joget.plugin -DartifactId=custom-plugin
+```
+
+## Build a plugin
+
+```
+docker run -it --rm -v "$PWD":/root/.m2 -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven jogetworkflow/docker-maven-joget:7.0-SNAPSHOT mvn clean install
+```
+
+NOTE: "$PWD" is for Mac, Linux and Windows Shell. For Windows Command Prompt, replace "$PWD" with "%cd%".
 
 # Getting Help
 
