@@ -7,13 +7,13 @@ This repository is to build a Docker image to simplify the building of [Joget](h
 ## Generate a plugin
 
 ```
-docker run -it --rm -v ${PWD}:/usr/src/mymaven -w /usr/src/mymaven jogetworkflow/docker-maven-joget:7.0-SNAPSHOT mvn archetype:generate -DarchetypeGroupId="org.joget" -DarchetypeArtifactId="wflow-plugin-archetype" -DarchetypeVersion="7.0-SNAPSHOT" -DgroupId="org.joget.plugin" -DartifactId="custom-plugin"
+docker run -it --rm -v ${PWD}:/usr/src/mymaven -w /usr/src/mymaven jogetworkflow/docker-maven-joget:8.0-SNAPSHOT mvn archetype:generate -DarchetypeGroupId="org.joget" -DarchetypeArtifactId="wflow-plugin-archetype" -DarchetypeVersion="8.0-SNAPSHOT" -DgroupId="org.joget.plugin" -DartifactId="custom-plugin"
 ```
 
 ## Build a plugin
 
 ```
-docker run -it --rm -v ${PWD}:/root/.m2 -v ${PWD}:/usr/src/mymaven -w /usr/src/mymaven jogetworkflow/docker-maven-joget:7.0-SNAPSHOT mvn clean install
+docker run -it --rm -v ${PWD}:/root/.m2 -v ${PWD}:/usr/src/mymaven -w /usr/src/mymaven jogetworkflow/docker-maven-joget:8.0-SNAPSHOT mvn clean install
 ```
 
 NOTE: ${PWD} is for Mac, Linux and Windows Shell. For Windows Command Prompt, replace ${PWD} with "%cd%".

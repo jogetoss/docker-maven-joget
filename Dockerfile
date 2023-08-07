@@ -1,6 +1,6 @@
-FROM maven:3.8.1-openjdk-8
+FROM maven:3.8.1-openjdk-11
 
-ENV JOGET_VERSION 7.0-SNAPSHOT
+ENV JOGET_VERSION 8.0-SNAPSHOT
 
 COPY install-libraries install-libraries
 

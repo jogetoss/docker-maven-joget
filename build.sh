@@ -6,5 +6,5 @@ wget -N http://dev.joget.org/community/download/attachments/19104566/install-lib
 unzip -a install-libraries.zip
 
 # build docker image
-docker build --rm -t jogetworkflow/docker-maven-joget:7.0-SNAPSHOT .
+docker build --rm -t jogetworkflow/docker-maven-joget:8.0-SNAPSHOT .
 
